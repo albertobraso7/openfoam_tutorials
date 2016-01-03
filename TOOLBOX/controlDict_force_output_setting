@@ -1,0 +1,21 @@
+libs
+(
+    "libforces.so"
+);
+
+functions
+{
+    wing
+    {
+        patches             (wing);
+        CofR                (0 0 0);
+        outputControl       timeStep;
+    outputInterval    50;
+        type                forces;
+        pName               p;
+        UName               U;
+        rhoName             rhoInf;
+        rhoInf              1.18;
+        log                 true;
+    }
+}

@@ -48,10 +48,10 @@ Line(ce++) = pts[{3,4}];lns[]+=ce;
 Line(ce++) = pts[{4,5}];lns[]+=ce;
 Line(ce++) = pts[{5,0}];lns[]+=ce;
 
-Line Loop(ce++) = lns[];boundary_loop = ce;
-Line Loop(ce++) = {spline_id,te_line};spline_loop = ce;
+Line Loop(ce++) = lns[]; boundary_loop = ce;
+Line Loop(ce++) = {spline_id,te_line}; spline_loop = ce;
 
-Plane Surface(ce++) = {boundary_loop,spline_loop};extrude_surface = ce;
+Plane Surface(ce++) = {boundary_loop, spline_loop}; extrude_surface = ce;
 
 new_entities[] = 
 Extrude{0,0,cell_depth}

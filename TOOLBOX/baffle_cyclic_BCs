@@ -1,0 +1,44 @@
+// U
+    baffle
+    {
+        type            cyclic;
+    }
+    baffleother
+    {
+        type            cyclic;
+    }
+
+// p
+    baffle
+    {
+        type            fixedJump;
+        patchType       cyclic;
+        jump            uniform 800;
+        value           uniform 0;
+    }
+    baffleother
+    {
+        type            fixedJump;
+        patchType       cyclic;
+        value           uniform 0;
+    }
+
+// nut
+    baffle
+    {
+        type            cyclic;
+    }
+    baffleother
+    {
+        type            cyclic;
+    }
+
+// nuTilda
+    baffle
+    {
+        type            cyclic;
+    }
+    baffleother
+    {
+        type            cyclic;
+    }

@@ -1,0 +1,2 @@
+-Change 0/U BC to magnusBlade and specify vars axis,tipV,value (dummy value (0 0 0))
+-Add to controlDict in "libs ( ... );": libMagnusBlade.so

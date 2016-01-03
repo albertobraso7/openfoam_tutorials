@@ -1,0 +1,33 @@
+Simulation of a 2D Bluff Body in a High-Speed Wake in OpenFOAM  
+
+All code can be found at: 
+https://github.com/rlee32/openfoam_tutorials/tree/master/bluff_body_wake
+
+DESCRIPTION:
+In this tutorial we set a bluff body (high drag, no/low lift) into the 
+high-speed wake of an actuator disk. We shall see that this causes the bluff 
+body to become a more aerodynamic body.
+Wake case average: <17.4, 8.6> N
+No wake case average: <31, 14.5> N
+
+OUTLINE:
+-Generate mesh in Gmsh.
+-Convert mesh to OpenFOAM format.
+-Make internal baffle faces a pressure jump region.
+-Run the simulation.
+
+COMMANDS:
+gmsh main.geo -3 -o test.msh
+gmshToFoam test.msh -case case
+# Now modify boundary file: 
+#   -tunnel and body as walls
+#   -front_and_back as empty
+#   -baffle as cyclic
+#   -add baffleother and neighbourPatch entries
+createBaffles -case case -dict system/baffleDict -overwrite
+pimpleFoam
+
+This tutorial was run successfully on:
+-Ubuntu 14.04 64-bit
+-OpenFOAM 3.0.0
+-Gmsh 2.11

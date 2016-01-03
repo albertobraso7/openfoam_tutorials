@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wclean
+wmake libso
+cp $FOAM_USER_LIBBIN/libMagnusBlade.so $FOAM_LIBBIN
