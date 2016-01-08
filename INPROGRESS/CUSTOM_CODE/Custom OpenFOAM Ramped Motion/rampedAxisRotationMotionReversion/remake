@@ -1,4 +1,0 @@
-#!/bin/bash
-wclean
-wmake libso
-sudo cp $FOAM_USER_LIBBIN/libRampedAxisRotationMotion.so $FOAM_LIBBIN

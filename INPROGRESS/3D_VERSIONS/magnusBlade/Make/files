@@ -1,3 +1,0 @@
-magnusBlade.C
-
-LIB = $(FOAM_USER_LIBBIN)/libMagnusBlade
